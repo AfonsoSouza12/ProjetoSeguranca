@@ -12,7 +12,7 @@
 	<groupId>br.edu.utfpr.pb</groupId>
 	<artifactId>ProjetoSeguranca</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>aula4</name>
+	<name>Projeto Segurança</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
