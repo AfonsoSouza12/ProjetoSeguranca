@@ -24,6 +24,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @Entity
 @Table(name = "usuario")
@@ -34,6 +35,7 @@ import lombok.ToString;
 @ToString
 public class Usuario implements Serializable, UserDetails{
 	private static final long serialVersionUID = 1L;
+	private static final BCryptPasswordEncoder bCrypt = new BCryptPasswordEncoder(10);
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -76,6 +78,10 @@ public class Usuario implements Serializable, UserDetails{
 	@Override
 	public boolean isEnabled() {
 		return true;
+	}
+
+	public String getEncodedPassword(String password){
+		return bCrypt.encode(password);
 	}
 	
 }

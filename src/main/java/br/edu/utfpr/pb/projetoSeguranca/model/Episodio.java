@@ -58,8 +58,8 @@ public class Episodio implements Serializable {
     @ManyToOne
     @JoinColumn(name = "serie_id", nullable = false, referencedColumnName = "id")
     private Serie serie;
-
-    @Convert(converter = BooleanConverter.class)
-    @Column(columnDefinition = "char(1) default 'V'")
-    private Boolean ativo;
+//
+//    @Convert(converter = BooleanConverter.class)
+//    @Column(columnDefinition = "char(1) default 'V'")
+//    private Boolean ativo;
 }
