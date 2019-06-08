@@ -10,6 +10,8 @@ import org.springframework.stereotype.Service;
 import br.edu.utfpr.pb.projetoSeguranca.model.Usuario;
 import br.edu.utfpr.pb.projetoSeguranca.repository.UsuarioRepository;
 import br.edu.utfpr.pb.projetoSeguranca.service.UsuarioService;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class UsuarioServiceImpl extends CrudServiceImpl<Usuario, Long> 
@@ -34,4 +36,9 @@ public class UsuarioServiceImpl extends CrudServiceImpl<Usuario, Long>
 		return usuario;
 	}
 
+	@Override
+	@Transactional(propagation = Propagation.REQUIRES_NEW)
+	public Usuario findByUsername(String username) {
+		return usuarioRepository.findByUsername(username);
+	}
 }
