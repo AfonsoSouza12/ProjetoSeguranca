@@ -17,7 +17,10 @@ public class CrudAuditorAware implements AuditorAware<Usuario> {
 
     @Override
     public Optional<Usuario> getCurrentAuditor() {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        Authentication authentication = SecurityContextHolder
+                                        .getContext()
+                                        .getAuthentication();
+
         return Optional.ofNullable(usuarioService.findByUsername(authentication.getName()));
     }
 }

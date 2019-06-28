@@ -101,4 +101,6 @@ public class UsuarioController extends CrudController<Usuario, Long>{
         }
         return modelAndView;
     }
+
+
 }

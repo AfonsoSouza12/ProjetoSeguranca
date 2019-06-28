@@ -101,3 +101,5 @@ INSERT INTO usuario(nome, username, password) VALUES ('Teste', 'teste','$2a$10$.
 INSERT INTO usuario_permissoes(usuario_id, permissoes_id) VALUES (1, 1);
 INSERT INTO usuario_permissoes(usuario_id, permissoes_id) VALUES (1, 2);
 INSERT INTO usuario_permissoes(usuario_id, permissoes_id) VALUES (2, 2);
+
+-- insert into genero_aud(id, rev, revtype, nome,created_by, modified_by) VALUES (23, 1,0,'teste',1,1)

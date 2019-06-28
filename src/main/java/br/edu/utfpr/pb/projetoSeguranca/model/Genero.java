@@ -40,16 +40,24 @@ public class Genero implements Serializable{
 	private String nome;
 
 	@CreatedBy
-	@CreatedDate
 	@ManyToOne
 	@JoinColumn(name = "createdBy", updatable = false)
 	private Usuario createdBy;
 
+//	@CreatedDate
+
+
 	@LastModifiedBy
-	@LastModifiedDate
 	@ManyToOne
 	@JoinColumn(name = "modifiedBy")
 	private Usuario modifiedBy;
+
+	//	@LastModifiedDate
+	
+	public Genero(Integer id, String nome) {
+		this.nome = nome;
+		this.id = id;
+	}
 }
 
 
