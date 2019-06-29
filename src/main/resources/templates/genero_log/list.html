@@ -36,9 +36,9 @@
                 <tr th:id="'row_' + ${genero_aud.id}" th:each="genero_aud: ${generoLogs}">
                     <td style="width:150px" class="text-center" th:text="${genero_aud.id}">0</td>
                     <td><a th:text="${genero_aud.nome}"></a></td>
-                    <!--<td><a th:text="${genero_aud.tipoTransacao}"></a></td>-->
-                    <!--<td><a th:text="${genero_aud.createdBy}"></a></td>-->
-                    <!--<td><a th:text="${genero_aud.modifiedBy}"></a></td>-->
+                    <td><a th:text="${genero_aud.tipoTransacao}"></a></td>
+                    <td><a th:text="${genero_aud.createdBy}"></a></td>
+                    <td><a th:text="${genero_aud.modifiedBy}"></a></td>
 
                 </tr>
                 <tr th:if="${generoLogs.empty}">

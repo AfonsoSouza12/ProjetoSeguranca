@@ -7,10 +7,10 @@ public interface GeneroAud {
 
     String getNome();
 
-    Integer tipoTransacao();
+    Integer getTipoTransacao();
 
-    Integer createdBy();
+    Integer getCreatedBy();
 
-    Integer modifiedBy();
+    Integer getModifiedBy();
 
 }
