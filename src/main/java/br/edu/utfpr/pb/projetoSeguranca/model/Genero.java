@@ -53,11 +53,7 @@ public class Genero implements Serializable{
 	private Usuario modifiedBy;
 
 	//	@LastModifiedDate
-	
-	public Genero(Integer id, String nome) {
-		this.nome = nome;
-		this.id = id;
-	}
+
 }
 
 

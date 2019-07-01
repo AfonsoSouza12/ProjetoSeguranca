@@ -59,11 +59,6 @@ public class GeneroController
 		return modelAndView;
 	}
 
-	@GetMapping("audit")
-	@ResponseBody
-	public List<GeneroAud> outracoisa() {
-		return generoAudRepository.findByGeneroLog();
-	}
 
 
 }

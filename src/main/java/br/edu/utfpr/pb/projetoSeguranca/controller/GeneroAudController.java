@@ -5,6 +5,7 @@ import br.edu.utfpr.pb.projetoSeguranca.model.Genero;
 import br.edu.utfpr.pb.projetoSeguranca.model.Serie;
 import br.edu.utfpr.pb.projetoSeguranca.repository.GeneroAudRepository;
 import br.edu.utfpr.pb.projetoSeguranca.service.GeneroAudService;
+import br.edu.utfpr.pb.projetoSeguranca.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -24,6 +25,9 @@ public class GeneroAudController {
     @Autowired
     private GeneroAudRepository generoAudRepository;
 
+    @Autowired
+    private UsuarioService usuarioService;
+
 
     protected String getURL() {
         return "genero_log";
@@ -40,6 +44,7 @@ public class GeneroAudController {
         ModelAndView modelAndView = new ModelAndView(this.getURL() + "/list");
 
         modelAndView.addObject("generoLogs", generoAudRepository.findByGeneroLog() );
+        modelAndView.addObject("usuarios", usuarioService.findAll() );
         return modelAndView;
     }
 
