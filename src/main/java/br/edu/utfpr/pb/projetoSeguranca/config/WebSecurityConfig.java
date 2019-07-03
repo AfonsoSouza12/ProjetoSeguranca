@@ -32,12 +32,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 			.and().logout()
 			.logoutSuccessUrl("/login")
 			.and().authorizeRequests()
-				.antMatchers("/genero/**").hasAnyRole("USER", "ADMIN")
-				.antMatchers("/produtora/**").hasAnyRole("USER", "ADMIN")
-				.antMatchers("/serie/**").hasAnyRole("ADMIN")
+				.antMatchers("/genero/**").permitAll()
+				.antMatchers("/produtora/**").permitAll()
+				.antMatchers("/serie/**").permitAll()
 				.antMatchers("/usuario/**").hasAnyRole("ADMIN")
 				.antMatchers("/episodio/**").permitAll()
-				.antMatchers("/**").authenticated();		
+				.antMatchers("/**").authenticated();
+//		.hasAnyRole("USER", "ADMIN"
 	}
 
 	@Override

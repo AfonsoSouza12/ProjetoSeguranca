@@ -94,6 +94,7 @@ INSERT INTO serie (nome, resumo, data_estreia, data_encerramento, nota, genero_i
 
 INSERT INTO permissao (nome) values('ROLE_ADMIN');
 INSERT INTO permissao (nome) values('ROLE_USER');
+INSERT INTO permissao (nome) values('ROLE_VISITANTE');
 
 INSERT INTO usuario(nome, username, password) VALUES ('Administrador', 'admin','$2a$10$.PVIfB07x.SfMYTcToxL0.yxcLWU0GbS2NUO1W1QAvqMm/TsFhVem');
 INSERT INTO usuario(nome, username, password) VALUES ('Teste', 'teste','$2a$10$.PVIfB07x.SfMYTcToxL0.yxcLWU0GbS2NUO1W1QAvqMm/TsFhVem');

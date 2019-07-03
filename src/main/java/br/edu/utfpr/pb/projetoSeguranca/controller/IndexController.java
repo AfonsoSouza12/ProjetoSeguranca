@@ -21,5 +21,11 @@ public class IndexController {
 		
 		return "redirect:/home";
 	}
-	
+
+	@GetMapping(value = "403")
+	public ModelAndView erro403(Model model) {
+		ModelAndView modelAndView = new ModelAndView("403");
+
+		return modelAndView;
+	}
 }
